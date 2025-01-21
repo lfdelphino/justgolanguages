@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Go Languages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+        integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="js/hystmodal/dist/hystmodal.min.css">
+    <script src="js/hystmodal/dist/hystmodal.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        :root {
+            --primary: #024873;
+            --secondary: #96d7ff50;
+            --background: rgb(255, 251, 241);
+            --font: "Poppins";
+            font-family: var(--font);
+            font-size: 62.5%;
+            color: var(--primary);
+        }
+
+        body {
+            background-image: url(bg.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+            height: 100vh;
+        }
+
+        #links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+            margin: 30px 0;
+            font-size: 2rem;
+        }
+
+        #links img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        svg,
+        object {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+
+            width: 20px;
+            height: 20px;
+            border-radius: 0;
+            z-index: 3;
+        }
+
+        .social-icons {
+            top: 12px;
+            left: 15px;
+
+            width: 33px;
+            height: 33px;
+        }
+
+        .social-icons svg {
+            fill: var(--primary);
+        }
+
+        #links .a:hover svg {
+            top: 12px;
+            right: 18px;
+        }
+
+        .svg-color {
+            stroke: var(--primary);
+        }
+
+        .social-icons {
+            fill: var(--primary);
+        }
+
+        .inner-box:hover .svg-color {
+            /*stroke: var(--background);*/
+        }
+
+        .inner-box:hover .social-icons {
+            fill: var(--background);
+        }
+
+
+        .link-box {
+            position: relative;
+            width: 100%;
+            max-width: 394px;
+            margin-bottom: -55px;
+        }
+
+        #links a {
+            background-color: var(--background);
+            color: var(--primary);
+            text-decoration: none;
+
+            display: block;
+            position: relative;
+
+            width: 96%;
+            padding: 13px 20px 13px 58px;
+            margin-bottom: 20px;
+            border: 2px solid var(--primary);
+            z-index: 2;
+
+            transition: transform 200ms ease-in-out;
+        }
+
+        #links a:hover {
+            /*background-color: var(--primary);
+    color: var(--background);*/
+
+            transform: translate(9px, -9px);
+        }
+
+        .link-background {
+            background-color: var(--secondary);
+
+            transform: translate(9px, -89px);
+            height: 60px;
+            width: 100%;
+            max-width: 385px;
+        }
+        .hystmodal__styled button {
+            margin: auto;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hystmodal" id="modal-google" aria-hidden="true">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button class="hystmodal__close" data-hystclose>Close</button>
+            <div class="hystmodal__styled">
+                <div class="h1">Leave us a Google Review</div>
+                <img src="google.png" alt="QR-Code" style="max-width: 80%;margin:auto;">
+                <button data-hystclose>Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="modal-twitter" aria-hidden="true">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button class="hystmodal__close" data-hystclose>Close</button>
+            <div class="hystmodal__styled">
+                <div class="h1">Follow us on X</div>
+                <img src="twitter.png" alt="QR-Code" style="max-width: 80%;margin:auto;">
+                <button data-hystclose>Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="modal-instagram" aria-hidden="true">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button class="hystmodal__close" data-hystclose>Close</button>
+            <div class="hystmodal__styled">
+                <div class="h1">Follow us on Instagram</div>
+                <img src="instagram.png" alt="QR-Code" style="max-width: 80%;margin:auto;">
+                <button data-hystclose>Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="modal-facebook" aria-hidden="true">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button class="hystmodal__close" data-hystclose>Close</button>
+            <div class="hystmodal__styled">
+                <div class="h1">Follow us on Facebook</div>
+                <img src="facebook.png" alt="QR-Code" style="max-width: 80%;margin:auto;">
+                <button data-hystclose>Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="modal-youtube" aria-hidden="true">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button class="hystmodal__close" data-hystclose>Close</button>
+            <div class="hystmodal__styled">
+                <div class="h1">Subscribe to Our Channel</div>
+                <img src="twitter.png" alt="QR-Code" style="max-width: 80%;margin:auto;">
+                <button data-hystclose>Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <dotlottie-player src="https://lottie.host/bc4b2fc1-59e8-457d-a626-8f23f2f2261a/dDM2UWXvVe.json"
+        background="transparent" speed="0.1" style="position: absolute;left: 0;bottom: 0;height: auto;"
+        loop autoplay>
+    </dotlottie-player>
+    <div class="w-full h-full">
+
+
+        <div
+            class="bg-[#fff]/80  xl:w-[50vw] sm:w-[60vw] w-[90vw] h-[80vh] absolute z-11 justify-center m-auto left-0 right-0 top-0 bottom-0 rounded-3xl ">
+            <img src="logo.png" class="h-36 mt-6 mx-auto" alt="Just Go Languages" />
+
+            <div id="links">
+                <div class="link-box">
+                    <div class="inner-box">
+                        <a href="#">
+                            <object type="image/svg+xml" data="calendar.svg" class="social-icons"></object> Vacation
+                            Request
+                            <object type="image/svg+xml" data="arrow.svg" class="social-color"></object>
+                        </a>
+                    </div>
+                    <div class="link-background"></div>
+                </div>
+                <div class="link-box">
+                    <div class="inner-box">
+                        <a href="#">
+                            <object type="image/svg+xml" data="bus.svg" class="social-icons"></object> Field Trip
+                            <object type="image/svg+xml" data="arrow.svg" class="social-color"></object>
+                        </a>
+                    </div>
+                    <div class="link-background"></div>
+                </div>
+                <div class="link-box">
+                    <div class="inner-box">
+                        <a href="#">
+                            <object type="image/svg+xml" data="medical.svg" class="social-icons"></object> Medical
+                            Excuse
+                            <object type="image/svg+xml" data="arrow.svg" class="social-color"></object>
+                        </a>
+                    </div>
+                    <div class="link-background"></div>
+                </div>
+            </div>
+
+            <div class="channels" style="background-color: #fff; padding: 5px;border-radius: 22px;text-align: center;">
+                <a class="channels_item" href="#" data-hystmodal="#modal-google">
+                    <i class="ri-google-line ri-3x"></i>
+                </a>
+                <a class="channels_item" href="#" data-hystmodal="#modal-instagram">
+                    <i class="ri-instagram-line ri-3x"></i>
+                </a>
+                <a class="channels_item" href="#" data-hystmodal="#modal-facebook">
+                    <i class="ri-facebook-circle-line ri-3x"></i>
+                </a>
+                <a class="channels_item" href="#" data-hystmodal="#modal-twitter">
+                    <i class="ri-twitter-x-line ri-3x"></i>
+                </a>
+                <a class="channels_item" href="#" data-hystmodal="#modal-youtube">
+                    <i class="ri-youtube-line ri-3x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload = function () {
+            const myModal = new HystModal({
+                linkAttributeName: "data-hystmodal",
+                //settings (optional). see API
+            });
+        };
+    </script>
+</body>
+
+</html>

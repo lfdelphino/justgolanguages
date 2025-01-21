@@ -1,0 +1,134 @@
+.Lora{
+    font-family: 'Lora', serif;
+}
+.Lexend{
+    font-family: 'Lexend', sans-serif;
+}
+.box{
+
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.box:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.github{
+    background-color: #2100c4 !important;
+}
+.instagram{
+    background-color: #f55376 !important;
+}
+.linkedin{
+    background-color: #0077b5 !important;
+}
+
+
+.channels {
+display: flex;
+max-width: 400px;
+margin: 0 auto;
+}
+
+.channels .channels_item {
+text-decoration: none;
+flex: 5;
+transition: transform 0.2s;
+color: #024873;
+}
+
+.channels_item:hover {
+transform: scale(1.25) rotate(1turn);
+transition: transform 1.5s;
+}
+
+
+/**************************\
+  Basic Modal Styles
+\**************************/
+.block-title {
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 300;
+  }
+  
+  
+  .hystmodal__window {
+    border-radius: 5px;
+    padding: 30px 30px;
+  }
+
+
+.hystmodal__styled {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .hystmodal__styled p {
+    margin-bottom: 0.8em;
+  }
+  
+  .hystmodal__styled a {
+    color: #6b83a6;
+  }
+  
+  .hystmodal__styled .h1 {
+    font-size: 2em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #39537a;
+  }
+  
+  .hystmodal__styled .h2 {
+    font-size: 1.8em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #39537a;
+  }
+  
+  .hystmodal__styled ul {
+    margin-bottom: 0.8em;
+  }
+  
+  .hystmodal__styled li {
+    padding: 0.2em 0 0.2em 30px;
+    position: relative;
+    list-style: none;
+  }
+  
+  .hystmodal__styled li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #39537a;
+    border-radius: 50%;
+    top: 12px;
+    left: 10px;
+  }
+  
+  .hystmodal__styled img {
+    display: block;
+    margin-bottom: 0.8em;
+    max-width: 100%;
+  }
+  
+  .hystmodal__styled button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    margin: 1em 0;
+    padding: 10px 30px;
+  
+  }
+  
+  .hystmodal__styled a:hover {
+    color: #39537a;
+  }
+  .hystmodal__window {
+    margin: auto;
+  }  
